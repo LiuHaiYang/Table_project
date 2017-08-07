@@ -1,0 +1,52 @@
+预安装
+基本教程：
+
+http://thrift.apache.org/docs/install/centos
+使用最新的thrift，不要使用9.2版本以下
+
+安装autoconf
+wget http://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz
+tar xvf autoconf-2.69.tar.gz
+cd autoconf-2.69
+./configure --prefix=/usr
+make
+sudo make install
+cd ..
+安装automake
+wget http://ftp.gnu.org/gnu/automake/automake-1.14.tar.gz
+tar xvf automake-1.14.tar.gz
+cd automake-1.14
+./configure --prefix=/usr
+make
+sudo make install
+cd ..
+安装bison
+wget http://ftp.gnu.org/gnu/bison/bison-2.5.1.tar.gz
+tar xvf bison-2.5.1.tar.gz
+cd bison-2.5.1
+./configure --prefix=/usr
+make
+sudo make install
+cd ..
+更新boost
+wget http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz
+tar xvf boost_1_55_0.tar.gz
+cd boost_1_55_0
+./bootstrap.sh
+sudo ./b2 install
+安装java环境
+yum install ant
+rpm -Uvh jdk-7u75-linux-x64.rpm
+安装php环境
+php版本5.5
+安装go环境
+设置GOPATH
+设置GOROOT
+安装thrift
+git clone https://git-wip-us.apache.org/repos/asf/thrift.git
+cd thrift
+./bootstrap.sh
+
+./configure --without-tests --without-ruby --without-python --with-php --with-go --with-lua=no --without-nodejs --with-java
+make
+make install

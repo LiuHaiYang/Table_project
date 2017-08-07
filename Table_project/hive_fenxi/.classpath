@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-core-1.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/hive-exec-0.14.0.jar"/>
+	<classpathentry kind="lib" path="lib/hive-jdbc-0.14.0.jar"/>
+	<classpathentry kind="lib" path="lib/hive-metastore-0.14.0.jar"/>
+	<classpathentry kind="lib" path="lib/hive-service-0.14.0.jar"/>
+	<classpathentry kind="lib" path="lib/libfb303-0.9.0.jar"/>
+	<classpathentry kind="lib" path="lib/libthrift-0.9.0.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.4.3.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-log4j12-1.4.3.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.38-bin.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

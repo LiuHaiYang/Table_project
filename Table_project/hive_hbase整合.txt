@@ -1,0 +1,31 @@
+CREATE EXTERNAL TABLE tabledata1(rowkey string,name string,age int,class string,department string,table_name string, table_id int)
+STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'                                                                      
+WITH SERDEPROPERTIES("hbase.columns.mapping"= ":key,info:name,info:age,info:class,info:department,info:table_name,info:table_id") 
+TBLPROPERTIES("hbase.table.name"="tabledata_1");  
+
+CREATE EXTERNAL TABLE user(rowkey string,name string,age int)
+STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'                                                                      
+WITH SERDEPROPERTIES("hbase.columns.mapping"= ":key,info:name,info:age") 
+TBLPROPERTIES("hbase.table.name"="user"); 
+
+
+
+CREATE EXTERNAL TABLE tabledata1(rowkey string,name string,age int,class string,department string,table_name string, table_id int)
+STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'                                                                      
+WITH SERDEPROPERTIES("hbase.columns.mapping"= ":key,info:name,info:age,info:class,info:department,info:table_name,info:table_id") 
+TBLPROPERTIES("hbase.table.name"="tabledata_1"); 
+
+
+
+
+
+
+
+SET hbase.zookeeper.quorum=winstar;（主机名）
+SET zookeeper.znode.parent=/hbase;
+ADD jar /usr/apache-hive-0.14.0-bin/lib/hive-hbase-handler-0.14.0.jar;
+
+CREATE EXTERNAL TABLE tabledata1(rowkey string,info map<STRING,STRING>)
+STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'                                                                      
+WITH SERDEPROPERTIES("hbase.columns.mapping"= ":key,info:") 
+TBLPROPERTIES("hbase.table.name"="tabledata_1");  
